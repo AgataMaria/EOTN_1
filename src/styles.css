@@ -63,6 +63,7 @@ body {
 
 .main__left-area a, 
 .main__right-area a {
+    font-weight: 200;
     display: block;
     text-decoration: none;
     padding: 0.5em;
@@ -72,7 +73,7 @@ body {
 
 .main__left-area a:hover, .main__left-area a:focus,
 .main__right-area a:hover, .main__right-area a:focus {
-
+    text-shadow: 1px 1px 3px var(--EOTNwhite), 0 -1px 1px var(--EOTNred);
 }
 
 .main__left-area {
@@ -106,10 +107,10 @@ body {
 }
 
 .logo__title {
-    font-weight: 400;
     font-size: clamp(0.8rem, 1.2vw, 1.5rem);
     text-align: center;
     padding-bottom: 1em;
+    font-weight: 400;
 }
 
 .socials__wrapper {
