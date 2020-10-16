@@ -1,0 +1,135 @@
+:root {
+    --EOTNred: #f00;
+    --EOTNwhite: #DFDADA;
+    --EOTNgrey: #bbb;
+}
+
+/* 
+MOST CLASS NAMES USE BEM
+
+GALLERY TYPE SUBPAGES are using the same body called 'gallery' 
+
+Subpages' elements are prefixed as follows:
+p- PORTFOLIO
+t- TYPOGRAPHY
+l- LOGO
+
+Most classes are selected by class*="afterprefix", but leaving prefixes in
+for individual pages, so it's easier to break off and style them individually
+
+*/
+
+/* GALLERY GENERAL STYLES */
+
+html {
+    -webkit-box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	-ms-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+  }
+  *, *:before, *:after {
+    -webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	-ms-box-sizing: inherit;
+	box-sizing: inherit;
+  }
+  
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    background-color: black;
+    color: var(--EOTNwhite);
+}
+
+body.gallery {
+    font-family: "Alegreya Sans", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+::selection {
+    background: var(--EOTNred);
+}
+
+body.gallery h1 
+{
+    color: var(--EOTNred);
+}
+
+body.gallery h2 
+{
+    font-weight: 400;
+    color: var(--EOTNwhite);
+}
+
+body.gallery p 
+{
+    font-weight: 300;
+    color: var(--EOTNwhite);
+}
+
+body.gallery a:hover,
+body.gallery a:focus {
+    background-color: var(--EOTNred);           
+}
+
+/* HEADER - logo + text - STYLES */
+
+[class*="-flex-page-container"] {
+    width: 100%;
+    padding: 2rem 20%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+[class*="-header"] {
+    max-width: 75vw;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+[class*="-logo__wrapper"] {
+    display: block;
+}
+
+[class*="-logo__img"] {
+    display: block;
+    margin: 4rem auto;
+}
+
+[class*="-summary__wrapper"] {
+    text-align: center;
+}
+
+[class*="-summary__heading"] {
+    display: inline;
+    font-size: 1em;
+}
+
+[class*="-summary__span"] {
+    color: var(--EOTNgrey);
+}
+
+[class*="-summary__link"] {
+    text-decoration: none;
+    color: var(--EOTNgrey);
+}
+
+/* MAIN - artwork - STYLES */
+
+[class*="-main__container"] {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+[class*="-artwork__wrapper"] {
+    margin: 2.5rem 5%;
+}
+
+[class*="-artwork__img"] {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+}

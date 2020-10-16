@@ -3,7 +3,7 @@
     --EOTNwhite: #DFDADA;
 }
 
-/* GENERAL STYLES */
+/* MAIN PAGE GENERAL STYLES */
 
 html {
     -webkit-box-sizing: border-box !important;
@@ -21,12 +21,31 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: "Josefin Sans", Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 200;
     line-height: 1.5;
     background-color: black;
     color: var(--EOTNwhite);
 }
+
+::selection {
+    background: var(--EOTNred);
+}
+
+body.index {
+    font-family: "Josefin Sans", Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 200;
+}
+
+details,
+details summary {
+padding-left:0;
+background-image:none;
+}
+
+details summary::-webkit-details-marker {
+    display:none;
+  }
+
+/* MAIN PAGE - STYLES FOR DESKTOP */
 
 .fullpage__container {
     width: 100%;
@@ -45,38 +64,13 @@ body {
 
 .main__left-area,
 .main__right-area {
-    position: absolute;
-    min-width: fit-content;
-    width: 25vw;
 	display: flex;
 	align-content: center;
 }
 
-.main__left-area ul,
-.main__right-area ul {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    list-style-type: none;
-}
-
-.main__left-area a, 
-.main__right-area a {
-    font-weight: 200;
-    display: block;
-    text-decoration: none;
-    padding: 0.5em;
-    color: #DFDADA;
-    font-size: larger;
-}
-
-.main__left-area a:hover, .main__left-area a:focus,
-.main__right-area a:hover, .main__right-area a:focus {
-    text-shadow: 1px 1px 3px var(--EOTNwhite), 0 -1px 1px var(--EOTNred);
-}
-
 .main__left-area {
+    position: absolute;
+    width: 25vw;
 	left: 0;
 }
 
@@ -127,10 +121,40 @@ body {
 
 .main__right-area {
 	right: 0;
-	justify-content: flex-end;
+    position: absolute;
+    width: 25vw;
+    justify-content: flex-end;
+}
+
+/* LINKS */
+
+.main__left-area ul,
+.main__right-area ul {
+    padding: 0 1em 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.main__left-area a, 
+.main__right-area a {
+    font-weight: 200;
+    display: block;
+    text-decoration: none;
+    padding: 1em 0.5em;
+    color: #DFDADA;
+    font-size: larger;
+}
+
+.main__left-area a:hover, .main__left-area a:focus,
+.main__right-area a:hover, .main__right-area a:focus {
+    text-shadow: 1px 1px 3px var(--EOTNwhite);
+     /* 0 -1px 1px var(--EOTNred); */
 }
 
 
+/* MAIN PAGE FOOTER DESKTOP */
 
 footer {
     position: absolute;
@@ -152,3 +176,5 @@ footer {
     margin: 0;
     padding: 0;
 }
+
+/* MAIN PAGE MOBILES */
