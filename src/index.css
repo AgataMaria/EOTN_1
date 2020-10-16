@@ -35,16 +35,6 @@ body.index {
     font-weight: 200;
 }
 
-details,
-details summary {
-padding-left:0;
-background-image:none;
-}
-
-details summary::-webkit-details-marker {
-    display:none;
-  }
-
 /* MAIN PAGE - STYLES FOR DESKTOP */
 
 .fullpage__container {
