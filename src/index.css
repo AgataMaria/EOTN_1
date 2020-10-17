@@ -65,7 +65,7 @@ body.index {
 }
 
 .main__middle-area {
-    width: auto;
+    width: clamp(30vw, 45vw, 50vw);
     margin: 0 auto;
     position: absolute;
     left: 0;
@@ -168,3 +168,4 @@ footer {
 }
 
 /* MAIN PAGE MOBILES */
+/* ⊹╰(⌣ʟ⌣)╯⊹ */

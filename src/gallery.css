@@ -8,18 +8,9 @@
 MOST CLASS NAMES USE BEM
 
 GALLERY TYPE SUBPAGES are using the same body called 'gallery' 
-
-Subpages' elements are prefixed as follows:
-p- PORTFOLIO
-t- TYPOGRAPHY
-l- LOGO
-
-Most classes are selected by class*="afterprefix", but leaving prefixes in
-for individual pages, so it's easier to break off and style them individually
-
 */
 
-/* GALLERY GENERAL STYLES */
+/* GALLERY GLOBAL STYLES */
 
 html {
     -webkit-box-sizing: border-box !important;
@@ -72,7 +63,12 @@ body.gallery a:focus {
     background-color: var(--EOTNred);           
 }
 
-[class*="-flex-page-container"] {
+figure {
+    text-align: center;
+    font-size: smaller;
+}
+
+.flex-page-container {
     width: 100%;
     padding: 2rem 20%;
     display: flex;
@@ -82,59 +78,65 @@ body.gallery a:focus {
 
 /* HEADER - logo + text - STYLES */
 
-[class*="-header"] {
+.header {
     max-width: 75vw;
     display: flex;
     flex-direction: column;
     align-content: center;
 }
 
-[class*="-logo__wrapper"] {
+.logo__wrapper {
     display: block;
 }
 
-[class*="-logo__img"] {
+.logo__img {
     display: block;
     margin: 4rem auto;
 }
 
-[class*="-summary__wrapper"] {
+.summary__wrapper {
     text-align: center;
 }
 
-[class*="-summary__heading"] {
+.summary__heading {
     display: inline;
-    font-size: 1em;
+    font-size: larger;
+    font-weight: 400;
 }
 
-[class*="-summary__span"] {
+.summary__span {
     color: var(--EOTNgrey);
 }
 
-[class*="-summary__link"] {
+.summary__link {
     text-decoration: none;
     color: var(--EOTNgrey);
  }
 
-[class*="-summary__link"] a:hover,
-[class*="-summary__link"] a:focus {
+.summary__link a:hover,
+.summary__link a:focus {
 background-color: var(--EOTNred);     
 }
 
 /* MAIN - artwork - STYLES */
 
-[class*="-main__container"] {
+.main__container {
     display: flex;
     flex-direction: column;
     align-content: center;
 }
 
-[class*="-artwork__wrapper"] {
+.artwork__wrapper {
     margin: 2.5rem 5%;
 }
 
-[class*="-artwork__img"] {
+.artwork__img {
     max-width: 100%;
     margin: 0 auto;
     display: block;
 }
+
+/* TODO: 
+⊹╰(⌣ʟ⌣)╯⊹ */
+
+/* GALLERY PAGES MOBILES */

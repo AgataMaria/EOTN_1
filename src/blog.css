@@ -4,7 +4,7 @@
     --EOTNgrey: #bbb;
 }
 
-/* BLOGS / SHORT ARTICLES / BLOG-GALLERY MIX GENERAL STYLES */
+/* BLOG / PHOTO BLOG / BLOG-GALLERY MIX GLOBAL STYLES */
 
 html {
     -webkit-box-sizing: border-box !important;
@@ -27,7 +27,8 @@ body {
     color: var(--EOTNwhite);
 }
 
-body.blog {
+body.blog,
+body.photoblog {
     font-family: "Alegreya Sans", Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -35,8 +36,8 @@ body.blog {
     background: var(--EOTNred);
 }
 
-body.blog h1 
-{
+body.blog h1,
+body.photoblog h1 {
     font-weight: 300;
     color: var(--EOTNred);
     font-size: clamp(2rem, 13vw, 3.5rem);
@@ -44,7 +45,8 @@ body.blog h1
     margin-bottom: 0px;
 }
 
-body.blog h2 
+body.blog h2,
+body.photoblog h2,
 {
     font-weight: 400;
     font-size: clamp(1.5rem, 9vw, 2.3rem);
@@ -97,15 +99,180 @@ body.blog a:focus {
     display: flex;
     flex-direction: column;
     align-content: center;
+    margin: 2rem 30%;
+}
+
+/* wider container for Photoblog */
+
+body.photoblog .main__container {
+    margin: 2rem 0;
+}
+
+.post {
+    margin: 2.5rem auto;
+}
+
+/* margins for a Post on Photo Blog */
+body.photoblog .post {
+    margin: 2.5rem 0;
+}:root {
+    --EOTNred: #f00;
+    --EOTNwhite: #DFDADA;
+    --EOTNgrey: #bbb;
+}
+
+/* BLOG / PHOTO BLOG / BLOG-GALLERY MIX GLOBAL STYLES */
+
+html {
+    -webkit-box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	-ms-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+  }
+  *, *:before, *:after {
+    -webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	-ms-box-sizing: inherit;
+	box-sizing: inherit;
+  }
+  
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    background-color: black;
+    color: var(--EOTNwhite);
+}
+
+body.blog,
+body.photoblog {
+    font-family: "Alegreya Sans", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+::selection {
+    background: var(--EOTNred);
+}
+
+body.blog h1,
+body.photoblog h1 {
+    font-weight: 300;
+    color: var(--EOTNred);
+    font-size: clamp(2rem, 13vw, 3.5rem);
+    word-break: break-word;
+    margin-bottom: 0px;
+}
+
+body.blog h2,
+body.photoblog h2,
+{
+    font-weight: 400;
+    font-size: clamp(1.5rem, 9vw, 2.3rem);
+    color: var(--EOTNwhite);
+    word-break: break-word;
+    margin-bottom: 0px;
+}
+
+body.blog p 
+{
+    font-weight: 300;
+    color: var(--EOTNwhite);
+    word-break: break-word;
+    font-size: 1.1rem;
+}
+
+body.blog a:hover,
+body.blog a:focus {
+    background-color: var(--EOTNred);           
+}
+
+.flex-page-container {
+    width: 100%;
+    padding: 2rem 20%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    border: 3px solid red;
+}
+
+/* HEADER - logo */
+
+.header {
+    max-width: 75vw;
+    margin: 3rem auto;
+}
+
+.logo__wrapper {
+    display: block;
+}
+
+.logo__img {
+    display: block;
+    margin: 4rem auto;
+}
+
+/* MAIN - POSTS - STYLES */
+
+.main__container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 2rem 30%;
+}
+
+/* wider container for Photoblog */
+
+body.photoblog .main__container {
+    margin: 2rem 0;
+}
+
+.post {
+    margin: 2.5rem auto;
+}
+
+/* margins for a Post on Photo Blog */
+body.photoblog .post {
+    margin: 2.5rem 0;
+}
+
+body.photoblog .post__title,
+body.photoblog .post__text {
     margin: 2rem 25%;
 }
 
-.post__wrapper {
-    margin: 2.5rem 5%;
-}
-
-[class*="__img"] {
+.post__img {
     max-width: 100%;
     margin: 0 auto;
     display: block;
 }
+
+.post__img--wide {
+    width: 100%;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+}
+
+/* TODO: 
+⊹╰(⌣ʟ⌣)╯⊹ */
+
+/* BLOG - MIXED POSTS */
+/* BLOG PAGES MOBILES */
+
+body.photoblog .post__title,
+body.photoblog .post__text {
+    margin: 2rem 25%;
+}
+
+.post__img {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.post__img--wide {
+    width: 100%;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+}
+
