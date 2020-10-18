@@ -258,21 +258,4 @@ body.photoblog .post__text {
 /* BLOG - MIXED POSTS */
 /* BLOG PAGES MOBILES */
 
-body.photoblog .post__title,
-body.photoblog .post__text {
-    margin: 2rem 25%;
-}
-
-.post__img {
-    max-width: 100%;
-    margin: 0 auto;
-    display: block;
-}
-
-.post__img--wide {
-    width: 100%;
-    object-fit: contain;
-    margin: 0 auto;
-    display: block;
-}
 

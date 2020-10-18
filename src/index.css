@@ -1,6 +1,11 @@
 :root {
+    /* EOTN global colours */
     --EOTNred: #f00;
     --EOTNwhite: #DFDADA;
+    /* screen max breakpoints */
+    --breakpoint-s: 768px;
+    --breakpoint-m: 992px;
+    --breakpoint-l: 1200px;
 }
 
 /* MAIN PAGE GENERAL STYLES */
@@ -45,7 +50,7 @@ body.index {
 .main__container {
     width: 100%;
     height: 100%;
-    position: relative;
+    display: flex;
 }
 
 .full-height-layout {
@@ -59,17 +64,12 @@ body.index {
 }
 
 .main__left-area {
-    position: absolute;
     width: 25vw;
-	left: 0;
 }
 
 .main__middle-area {
     width: clamp(30vw, 45vw, 50vw);
     margin: 0 auto;
-    position: absolute;
-    left: 0;
-    right: 0;
     min-width: fit-content;
     max-width: 50vw;
     display: flex;
@@ -110,8 +110,6 @@ body.index {
 }
 
 .main__right-area {
-	right: 0;
-    position: absolute;
     width: 25vw;
     justify-content: flex-end;
 }
@@ -125,6 +123,10 @@ body.index {
     flex-direction: column;
     justify-content: center;
     list-style-type: none;
+}
+
+.main__right-area ul {
+    text-align: right;
 }
 
 .main__left-area a, 
@@ -167,5 +169,11 @@ footer {
     padding: 0;
 }
 
-/* MAIN PAGE MOBILES */
+/* MAIN PAGE MOBILES or SCREENS IN PORTRAIT MODE */
 /* ⊹╰(⌣ʟ⌣)╯⊹ */
+
+@media screen and (orientation: portrait), screen and (max-width: var(--breakpoint-s)) {
+    body {
+    background-color: yellow;
+    }
+}
