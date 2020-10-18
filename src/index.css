@@ -238,3 +238,17 @@ footer {
 
 
 }
+
+/* TODO */
+/* FROM TRELLO:
+uwagi do strony głównej z adresu https://flower-ebony-thunder.glitch.me/index.html
+
+Zwróć uwagę na to co napisali w PageSpeed Insights
+https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fflower-ebony-thunder.glitch.me%2Findex.html
+
+Może dasz radę coś zrobić z tymi webfontami co się tak ładują? To by może jeszcze szybciej się załadowało. Z tego co kojarzę to można coś powalczyć ze sposobem ich ładowania, aby nie blokowały renderowania, ale to już zerknij sama. Ten wynik 96/100 to jest i tak petarda! Będzie nieco gorzej jak dorzucę foty dobrej jakości, ale jest nieźle :)
+
+Menu lewa i prawa na desktopie - odsuń około 50px od krawędzi odpowiednio lewej i prawej.
+
+MOBILE: dajmy logo, hasło, ikonki do góry bardziej, a linki do portfolio i blogów będą pod nimi - tak jak rozmawialiśmy. Jeśli nadal będzie kicha to można zrobić najpierw linki do portfolio 5 sztuk, a pod nimi linki do blog postów. Nie wiem jak to się zachowa wtedy na mobile, gdy będzie długi tytuł blog posta?
+*/

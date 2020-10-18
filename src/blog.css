@@ -255,7 +255,21 @@ body.photoblog .post__text {
 /* TODO: 
 ⊹╰(⌣ʟ⌣)╯⊹ */
 
-/* BLOG - MIXED POSTS */
+/* BLOG - MIXED POSTS
+create mix.html
+adjust styling in line with EOTN's design */
+
+/* FROM TRELLO 
+photoblog.html:
+DESKTOP: Czy to, że to zdjęcie z "krzakami" jest rozpikselizowane to wynika tylko z jego rozmiaru i wystarczy ładować odpowiednio szerokie? Możemy ustawić max 1600? Bo większe będą bardzo długi się łądowały.
+
+MOBILE: tekst treści wpisu dałbym na około 90% szerokości ekranu, może 75%. W każdym razie szerzej niż jest obecnie, bo po bokach jest trochę za dużo miejsca.
+
+blog.html
+ jedyna uwaga to na MOBILE: jest zbyt wąsko, na DESKTOP super, może być nawet ciut węziej w sumie, ale zostawiam do Twojej oceny i wyczucia :)
+
+*/
+
 /* BLOG PAGES MOBILES */
 
 
