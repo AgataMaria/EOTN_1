@@ -119,7 +119,7 @@ body.index {
 
 .main__left-area ul,
 .main__right-area ul {
-    padding: 0 1em 0 0;
+    padding: 0 1em 0 1em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -135,7 +135,7 @@ body.index {
     font-weight: 200;
     display: block;
     text-decoration: none;
-    padding: 1em 0.5em;
+    padding: 1em 1em;
     color: #DFDADA;
     font-size: larger;
 }
@@ -188,11 +188,18 @@ footer {
 .main__left-area,
 .main__right-area {
     display: inline-block;
-    order: 3;
     flex-shrink: 3;
     flex-grow: 2;
     width: 40%;
     height: 40%;
+}
+
+.main__left-area {
+    order: 2;
+}
+
+.main__right-area {
+    order: 4;
 }
 
 /* LINKS */
@@ -205,6 +212,11 @@ footer {
     text-align: left;
 }
 
+.main__left-area ul,
+.main__right-area {
+    padding: 0 0.5em 0 0.5em;
+}
+
 .main__middle-area {
     width: 100%;
     height: 50%;
@@ -212,10 +224,10 @@ footer {
     margin: 2rem auto;
 }
 
-.horizontal-rule {
-    order: 2;
-    width: 70vw;
-    height: 1px;
+.rule {
+    order: 3;
+    width: 1px;
+    height: auto;
     margin: 1.666rem;
     background-color: var(--EOTNwhite);
     opacity: 66.6%;

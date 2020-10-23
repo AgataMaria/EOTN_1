@@ -146,7 +146,7 @@ body {
 
 body.blog,
 body.photoblog {
-    font-family: "Alegreya Sans", Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Alegreya Sans", "Gill Sans", Verdana, Tahoma, sans-serif;
 }
 
 ::selection {
