@@ -64,11 +64,6 @@ body.gallery a:focus {
     color: var(--EOTNwhite);          
 }
 
-figure {
-    text-align: center;
-    font-size: smaller;
-}
-
 .flex-page-container {
     width: 100%;
     padding: 2rem 20%;
@@ -131,10 +126,13 @@ background-color: var(--EOTNred);
 
 .artwork__wrapper {
     margin: 2.5rem 5%;
+    text-align: center;
+    font-size: smaller;
 }
 
 .artwork__img {
     max-width: 100%;
+    max-height: 85vh;
     margin: 0 auto;
     display: block;
 }
@@ -153,19 +151,6 @@ background-color: var(--EOTNred);
     }
 }
 
-/* TODO: 
-⊹╰(⌣ʟ⌣)╯⊹ */
-
-/* FROM TRELLO:
-OK - DESKTOP: odstęp między nazwą kategorii w czerwonym kolorze i "przejdź do innej" powinien być jednak nieco większy. Tam jest jedna spacja i wygląda to dziwnie.
-
-OK - Kolor pozostałych kategorii itd. powinien być ciemniejszy szary, inny niż tekst
-
-MOBILE: obrazki są jakieś małe - da się je rozciągnąć nieco?
-
-jeszcze jedna rzecz - nie przewidziałem tego wcześniej, przerpaszam. Jak obrazki są w rozmiarze oryginalnym to są czasem bardzo wysokie, więc aby je obejrzeć w całości trzeba je skrolować. Dałoby się coś z tym zrobić? Jakaś ich max wysokość?
 
 
-*/
 
-/* GALLERY PAGES MOBILES */
