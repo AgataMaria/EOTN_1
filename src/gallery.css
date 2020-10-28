@@ -1,7 +1,7 @@
 :root {
     --EOTNred: #f00;
     --EOTNwhite: #DFDADA;
-    --EOTNgrey: #bbb;
+    --EOTNgrey: #666;
 }
 
 /* 
@@ -60,7 +60,8 @@ body.gallery p
 
 body.gallery a:hover,
 body.gallery a:focus {
-    background-color: var(--EOTNred);           
+    background-color: var(--EOTNred); 
+    color: var(--EOTNwhite);          
 }
 
 figure {
@@ -83,6 +84,7 @@ figure {
     display: flex;
     flex-direction: column;
     align-content: center;
+    margin: 0 auto;
 }
 
 .logo__wrapper {
@@ -102,10 +104,11 @@ figure {
     display: inline;
     font-size: larger;
     font-weight: 400;
+    padding-right: .5em;
 }
 
 .summary__span {
-    color: var(--EOTNgrey);
+    color: var(--EOTNwhite);
 }
 
 .summary__link {
@@ -136,13 +139,27 @@ background-color: var(--EOTNred);
     display: block;
 }
 
+/* GALLERY PAGES MOBILES or SCREENS IN PORTRAIT MODE */
+/* ⊹╰(⌣ʟ⌣)╯⊹ */
+
+@media screen and (orientation: portrait), screen and (max-width: var(--breakpoint-s))
+{
+    .flex-page-container {
+        padding: 1.5rem 5%;
+    }
+
+    .artwork__wrapper {
+        margin: 1.5rem 2%;
+    }
+}
+
 /* TODO: 
 ⊹╰(⌣ʟ⌣)╯⊹ */
 
 /* FROM TRELLO:
-DESKTOP: odstęp między nazwą kategorii w czerwonym kolorze i "przejdź do innej" powinien być jednak nieco większy. Tam jest jedna spacja i wygląda to dziwnie.
+OK - DESKTOP: odstęp między nazwą kategorii w czerwonym kolorze i "przejdź do innej" powinien być jednak nieco większy. Tam jest jedna spacja i wygląda to dziwnie.
 
-Kolor pozostałych kategorii itd. powinien być ciemniejszy szary, inny niż tekst
+OK - Kolor pozostałych kategorii itd. powinien być ciemniejszy szary, inny niż tekst
 
 MOBILE: obrazki są jakieś małe - da się je rozciągnąć nieco?
 
