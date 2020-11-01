@@ -170,8 +170,8 @@ footer {
     padding: 0;
 }
 
-/* MAIN PAGE MOBILES or SCREENS IN PORTRAIT MODE */
-/* ⊹╰(⌣ʟ⌣)╯⊹ */
+/* MAIN PAGE - MOBILES or SCREENS IN PORTRAIT MODE */
+/* ta-daa ⊹╰(⌣ʟ⌣)╯⊹ */
 
 @media screen and (orientation: portrait), screen and (max-width: var(--breakpoint-s)) {
 .fullpage__container {
@@ -244,7 +244,9 @@ footer {
 }
 
 footer {
-    visibility: collapse;
+    position: relative;
+    bottom: 0;
+    margin-top: 1rem;
 }
 
 
