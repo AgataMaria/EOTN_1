@@ -25,10 +25,6 @@ body {
     line-height: 1.5;
     background-color: black;
     color: var(--EOTNwhite);
-}
-
-body.blog,
-body.photoblog {
     font-family: "Alegreya Sans", Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -36,8 +32,7 @@ body.photoblog {
     background: var(--EOTNred);
 }
 
-body.blog h1,
-body.photoblog h1 {
+h1 {
     font-weight: 300;
     color: var(--EOTNred);
     font-size: clamp(2rem, 13vw, 3.5rem);
@@ -45,9 +40,7 @@ body.photoblog h1 {
     margin-bottom: 0px;
 }
 
-body.blog h2,
-body.photoblog h2
-{
+h2 {
     font-weight: 400;
     font-size: clamp(1.5rem, 9vw, 2.3rem);
     color: var(--EOTNwhite);
@@ -55,19 +48,29 @@ body.photoblog h2
     margin-bottom: 0px;
 }
 
-body.blog p,
-body.photoblog p
-{
+p {
     font-weight: 300;
     color: var(--EOTNwhite);
     word-break: break-word;
     font-size: 1.1rem;
 }
 
-body.blog a:hover,
-body.blog a:focus {
-    background-color: var(--EOTNred);           
+main a {
+    text-decoration: none;
+    color: var(--EOTNred);
+    padding: 0 0.2em;
 }
+
+main a:hover,
+main a:focus  {
+    color: white;
+    background: var(--EOTNred);
+    transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+ }
+
+/* a:hover, a:focus {
+    background-color: var(--EOTNred);           
+} */
 
 /* HEADER - logo */
 
@@ -113,21 +116,24 @@ body.photoblog .post__text {
     margin: 2.5rem 25%;
 }
 
+.post__img,
+.post__img--wide {
+    max-width: 1600px;
+    max-height: 90vh;
+}
+
 .post__img {
     width: auto;
-    max-width: 1600px;
     height: auto;
-    max-height: 90vh;
     margin: 0 auto;
     display: block;
 }
 
 .post__img--wide {
     width: 100%;
-    max-width: 1600px;
     object-fit: contain;
-
 }
+
 
 /* BLOG PAGES - MOBILES or SCREENS IN PORTRAIT MODE */
 /* ta-daa ⊹╰(⌣ʟ⌣)╯⊹ */

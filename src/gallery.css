@@ -60,9 +60,10 @@ body.gallery p
 
 body.gallery a:hover,
 body.gallery a:focus {
-    background-color: var(--EOTNred); 
-    color: var(--EOTNwhite);          
-}
+    color: white;
+    background: var(--EOTNred);
+    transition: all 0.2s ease-in-out;
+}     
 
 .flex-page-container {
     width: 100%;
