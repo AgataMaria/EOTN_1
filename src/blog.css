@@ -1,10 +1,16 @@
+/* pretty it up ⊹╰(⌣ʟ⌣)╯⊹  */
+
+/* Change global COLOURS here */
+
 :root {
     --EOTNred: #f00;
     --EOTNwhite: #DFDADA;
     --EOTNgrey: #bbb;
 }
 
-/* BLOG / PHOTO BLOG / BLOG-GALLERY MIX GLOBAL STYLES */
+/* BLOG / PHOTO BLOG / BLOG-GALLERY MIX 
+GLOBAL STYLES */
+
 
 html {
     -webkit-box-sizing: border-box !important;
@@ -28,8 +34,14 @@ body {
     font-family: "Alegreya Sans", Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* TEXT */
+
 ::selection {
     background: var(--EOTNred);
+}
+
+strong {
+    font-weight: 700;
 }
 
 h1 {
@@ -55,6 +67,7 @@ p {
     font-size: 1.1rem;
 }
 
+/* LINKS */
 main a {
     text-decoration: none;
     color: var(--EOTNred);
@@ -65,14 +78,31 @@ main a:hover,
 main a:focus  {
     color: white;
     background: var(--EOTNred);
-    transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
  }
 
-/* a:hover, a:focus {
-    background-color: var(--EOTNred);           
-} */
+ /* QUOTES */
 
-/* HEADER - logo */
+ cite {
+    display: inline-block;
+    position: relative;
+    margin: 0.5em 1rem;
+    letter-spacing: 0.1em;
+}
+
+cite::before {
+    content: '';
+    width: 0.2rem;
+    height: 100%;
+    background: var(--EOTNred);
+    position: absolute;
+    top: 0px;
+    border-radius: 0.1rem;
+    margin: 0 -1rem;
+}
+
+/* HEADER
+- LOGO  */
 
 .header {
     max-width: 75vw;
@@ -88,7 +118,8 @@ main a:focus  {
     margin: 4rem auto;
 }
 
-/* MAIN - POSTS - STYLES */
+/* MAIN SECTION
+- CONTAINER + POSTS */
 
 .main__container {
     display: flex;
@@ -97,23 +128,14 @@ main a:focus  {
     margin: 2rem 30%;
 }
 
-/* wider container for Photoblog */
+/* Photoblog specific
+- wider MAIN container */
 body.photoblog .main__container {
     margin: 2rem 0;
 }
 
 .post {
     margin: 2.5rem auto;
-}
-
-/* Post margins on Photoblog */
-body.photoblog .post {
-    margin: 2.5rem 0;
-}
-
-body.photoblog .post__title,
-body.photoblog .post__text {
-    margin: 2.5rem 25%;
 }
 
 .post__img,
@@ -134,9 +156,27 @@ body.photoblog .post__text {
     object-fit: contain;
 }
 
+/* Photoblog specific
+- POST styles */
+body.photoblog .post {
+    margin: 2.5rem 0;
+}
 
-/* BLOG PAGES - MOBILES or SCREENS IN PORTRAIT MODE */
-/* ta-daa ⊹╰(⌣ʟ⌣)╯⊹ */
+body.photoblog .post__title,
+body.photoblog .post__text {
+    margin: 2.5rem 25%;
+}
+
+/* FOOTER */
+
+footer {
+    position: relative;
+    bottom: 0;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* MOBILES or SCREENS IN PORTRAIT MODE */
 
 @media screen and (orientation: portrait), screen and (max-width: var(--breakpoint-s))
 {

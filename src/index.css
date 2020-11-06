@@ -1,3 +1,5 @@
+/* pretty it up ⊹╰(⌣ʟ⌣)╯⊹  */
+
 :root {
     /* EOTN global colours */
     --EOTNred: #f00;
@@ -8,7 +10,7 @@
     --breakpoint-l: 1200px;
 }
 
-/* MAIN PAGE GENERAL STYLES */
+/* FRONT PAGE GENERAL STYLES */
 
 html {
     -webkit-box-sizing: border-box !important;
@@ -35,12 +37,13 @@ body {
     background: var(--EOTNred);
 }
 
-body.index {
+body {
     font-family: "Josefin Sans", Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 200;
 }
 
-/* MAIN PAGE - STYLES FOR DESKTOP */
+/* FRONT PAGE 
+- LAYOUT STYLES FOR DESKTOP */
 
 .fullpage__container {
     width: 100%;
@@ -143,11 +146,13 @@ body.index {
 .main__left-area a:hover, .main__left-area a:focus,
 .main__right-area a:hover, .main__right-area a:focus {
     text-shadow: 1px 1px 3px var(--EOTNwhite);
-     /* 0 -1px 1px var(--EOTNred); */ /* optional additional colour */
+    /* 0 -1px 1px var(--EOTNred); */
+    /* optional additional colour */
 }
 
 
-/* MAIN PAGE FOOTER DESKTOP */
+/* FRONT PAGE 
+FOOTER DESKTOP */
 
 footer {
     position: absolute;
@@ -170,8 +175,8 @@ footer {
     padding: 0;
 }
 
-/* MAIN PAGE - MOBILES or SCREENS IN PORTRAIT MODE */
-/* ta-daa ⊹╰(⌣ʟ⌣)╯⊹ */
+/* FRONT PAGE 
+- MOBILES or SCREENS IN PORTRAIT MODE */
 
 @media screen and (orientation: portrait), screen and (max-width: var(--breakpoint-s)) {
 .fullpage__container {
@@ -224,7 +229,8 @@ footer {
     margin: 2rem auto;
 }
 
-.rule {
+/* DIVIDER LINE */
+.divider {
     order: 3;
     width: 1px;
     height: auto;
