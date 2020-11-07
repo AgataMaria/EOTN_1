@@ -81,6 +81,8 @@ body {
     flex-shrink: 2;
 }
 
+/* LOGO */
+
 .logo__wrapper {
     width: 100%;
     display: flex;
@@ -99,6 +101,8 @@ body {
     padding-bottom: 1em;
     font-weight: 400;
 }
+
+/* SOCIALS */
 
 .socials__wrapper {
     display: flex;
