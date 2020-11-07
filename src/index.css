@@ -145,9 +145,8 @@ body {
 
 .main__left-area a:hover, .main__left-area a:focus,
 .main__right-area a:hover, .main__right-area a:focus {
-    text-shadow: 1px 1px 3px var(--EOTNwhite);
-    /* 0 -1px 1px var(--EOTNred); */
-    /* optional additional colour */
+    text-shadow: 1px 1px 3px var(--EOTNwhite),
+    0 -1px 1px var(--EOTNred);
 }
 
 
