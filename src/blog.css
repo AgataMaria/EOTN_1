@@ -3,9 +3,14 @@
 /* Change global COLOURS here */
 
 :root {
+    /* EOTN global colours */
     --EOTNred: #f00;
     --EOTNwhite: #DFDADA;
-    --EOTNgrey: #bbb;
+    --EOTNgrey: #666;
+    /* screen max breakpoints */
+    --breakpoint-s: 768px;
+    --breakpoint-m: 992px;
+    --breakpoint-l: 1200px;
 }
 
 /* BLOG / PHOTO BLOG / BLOG-GALLERY MIX 
@@ -178,7 +183,8 @@ footer {
 
 /* MOBILES or SCREENS IN PORTRAIT MODE */
 
-@media screen and (orientation: portrait), screen and (max-width: var(--breakpoint-s))
+@media screen and (orientation: portrait), 
+screen and (max-width: var(--breakpoint-s))
 {
     .main__container {
         margin: 1rem 10%;

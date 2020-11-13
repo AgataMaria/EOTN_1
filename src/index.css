@@ -4,6 +4,7 @@
     /* EOTN global colours */
     --EOTNred: #f00;
     --EOTNwhite: #DFDADA;
+    --EOTNgrey: #666;
     /* screen max breakpoints */
     --breakpoint-s: 768px;
     --breakpoint-m: 992px;
@@ -52,7 +53,7 @@ body {
 
 .main__container {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
 }
 
@@ -161,14 +162,14 @@ footer {
     position: absolute;
     bottom: 0px;
     width: 100%;
-    height: 3rem;
+    height: clamp(0.5rem, 4%, 3rem);
     display: flex;
     justify-content: center;
     align-content: start;
 }
 
 .footer__text-area {
-    padding-bottom: 1rem;
+    padding-bottom: 1.5%;
     font-weight: 200;
     font-size: smaller;
 }
@@ -181,97 +182,81 @@ footer {
 /* FRONT PAGE 
 - MOBILES or SCREENS IN PORTRAIT MODE */
 
-@media screen and (orientation: portrait), screen and (max-width: var(--breakpoint-s)) {
-.fullpage__container {
-    width: 100%;
-    height: auto;
+@media screen and (orientation: portrait), 
+screen and (max-width: var(--breakpoint-s)), 
+screen and (max-width: var(--breakpoint-l)) and (orientation: landscape) {
+    .fullpage__container {
+        width: 100%;
+        height: auto;
+    }
+
+    .main__container {
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .main__left-area,
+    .main__right-area {
+        display: inline-block;
+        flex-shrink: 3;
+        flex-grow: 2;
+        width: 40%;
+        height: 40%;
+    }
+
+    .main__left-area {
+        order: 2;
+    }
+
+    .main__right-area {
+        order: 4;
+    }
+
+    /* LINKS */
+
+    .main__left-area ul {
+        text-align: right;
+    }
+
+    .main__right-area ul {
+        text-align: left;
+    }
+
+    .main__left-area ul,
+    .main__right-area {
+        padding: 0 0.5em 0 0.5em;
+    }
+
+    .main__middle-area {
+        width: 100%;
+        height: 50%;
+        order: 1;
+        margin: 2rem auto;
+    }
+
+    /* DIVIDER LINE */
+    .divider {
+        order: 3;
+        width: 1px;
+        height: auto;
+        margin: 1.666rem;
+        background-color: var(--EOTNwhite);
+        opacity: 66.6%;
+    }
+
+    .main__left-area a, 
+    .main__right-area a {
+        font-weight: 200;
+        display: block;
+        text-decoration: none;
+        padding: .5em 0.5em;
+        color: #DFDADA;
+        font-size: larger;
+    }
+
+    footer {
+        position: relative;
+        bottom: 0;
+     }
 }
-
-.main__container {
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-}
-
-.main__left-area,
-.main__right-area {
-    display: inline-block;
-    flex-shrink: 3;
-    flex-grow: 2;
-    width: 40%;
-    height: 40%;
-}
-
-.main__left-area {
-    order: 2;
-}
-
-.main__right-area {
-    order: 4;
-}
-
-/* LINKS */
-
-.main__left-area ul {
-    text-align: right;
-}
-
-.main__right-area ul {
-    text-align: left;
-}
-
-.main__left-area ul,
-.main__right-area {
-    padding: 0 0.5em 0 0.5em;
-}
-
-.main__middle-area {
-    width: 100%;
-    height: 50%;
-    order: 1;
-    margin: 2rem auto;
-}
-
-/* DIVIDER LINE */
-.divider {
-    order: 3;
-    width: 1px;
-    height: auto;
-    margin: 1.666rem;
-    background-color: var(--EOTNwhite);
-    opacity: 66.6%;
-}
-
-.main__left-area a, 
-.main__right-area a {
-    font-weight: 200;
-    display: block;
-    text-decoration: none;
-    padding: .5em 0.5em;
-    color: #DFDADA;
-    font-size: larger;
-}
-
-footer {
-    position: relative;
-    bottom: 0;
-    margin-top: 1rem;
-}
-
-
-
-}
-
-/* TODO */
-/* FROM TRELLO:
-uwagi do strony głównej z adresu https://flower-ebony-thunder.glitch.me/index.html
-
-Zwróć uwagę na to co napisali w PageSpeed Insights
-https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fflower-ebony-thunder.glitch.me%2Findex.html
-
-Może dasz radę coś zrobić z tymi webfontami co się tak ładują? To by może jeszcze szybciej się załadowało. Z tego co kojarzę to można coś powalczyć ze sposobem ich ładowania, aby nie blokowały renderowania, ale to już zerknij sama. Ten wynik 96/100 to jest i tak petarda! Będzie nieco gorzej jak dorzucę foty dobrej jakości, ale jest nieźle :)
-
-Menu lewa i prawa na desktopie - odsuń około 50px od krawędzi odpowiednio lewej i prawej.
-
-MOBILE: dajmy logo, hasło, ikonki do góry bardziej, a linki do portfolio i blogów będą pod nimi - tak jak rozmawialiśmy. Jeśli nadal będzie kicha to można zrobić najpierw linki do portfolio 5 sztuk, a pod nimi linki do blog postów. Nie wiem jak to się zachowa wtedy na mobile, gdy będzie długi tytuł blog posta?
-*/

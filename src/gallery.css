@@ -3,14 +3,19 @@
 /* Change global COLOURS here */
 
 :root {
+    /* EOTN global colours */
     --EOTNred: #f00;
     --EOTNwhite: #DFDADA;
     --EOTNgrey: #666;
+    /* screen max breakpoints */
+    --breakpoint-s: 768px;
+    --breakpoint-m: 992px;
+    --breakpoint-l: 1200px;
 }
 
 /* GALLERY 
 GLOBAL STYLES 
-NB. as this is a gallery not global text styles */
+NB. as this is a gallery no global text styles */
 
 html {
     -webkit-box-sizing: border-box !important;
@@ -132,10 +137,13 @@ footer {
 
 /* GALLERY PAGES MOBILES or SCREENS IN PORTRAIT MODE */
 
-@media screen and (orientation: portrait), screen and (max-width: var(--breakpoint-s))
+@media screen and (orientation: portrait), 
+screen and (max-width: var(--breakpoint-s)), 
+screen and (max-width: var(--breakpoint-l)) and (orientation: lanscape)
 {
     .flex-page-container {
         padding: 1.5rem 5%;
+        background-color: aquamarine;
     }
 
     .artwork__wrapper {
