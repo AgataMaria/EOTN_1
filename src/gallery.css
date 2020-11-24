@@ -135,6 +135,10 @@ footer {
     text-align: center;
 }
 
+.footer__text-area p {
+    font-size: smaller;
+}
+
 /* GALLERY PAGES MOBILES or SCREENS IN PORTRAIT MODE */
 
 @media screen and (orientation: portrait), 
@@ -143,7 +147,6 @@ screen and (max-width: var(--breakpoint-l)) and (orientation: lanscape)
 {
     .flex-page-container {
         padding: 1.5rem 5%;
-        background-color: aquamarine;
     }
 
     .artwork__wrapper {

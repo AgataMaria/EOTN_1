@@ -145,7 +145,7 @@ body.photoblog .main__container {
 
 .post__img,
 .post__img--wide {
-    max-width: 1600px;
+    max-width: clamp(100%, 1600px, 100%);
     max-height: 90vh;
 }
 
@@ -179,6 +179,10 @@ footer {
     bottom: 0;
     margin-top: 1rem;
     text-align: center;
+}
+
+.footer__text-area p {
+    font-size: smaller;
 }
 
 /* MOBILES or SCREENS IN PORTRAIT MODE */

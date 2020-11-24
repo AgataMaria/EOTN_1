@@ -48,7 +48,8 @@ body {
 
 .fullpage__container {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
 }
 
 .main__container {
@@ -183,8 +184,10 @@ footer {
 - MOBILES or SCREENS IN PORTRAIT MODE */
 
 @media screen and (orientation: portrait), 
-screen and (max-width: var(--breakpoint-s)), 
-screen and (max-width: var(--breakpoint-l)) and (orientation: landscape) {
+screen and (max-width: var(--breakpoint-s)),
+/* added for newer mobiles */
+screen and (max-width: 808px) and (orientation: landscape)
+{
     .fullpage__container {
         width: 100%;
         height: auto;
