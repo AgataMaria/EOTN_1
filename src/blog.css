@@ -106,6 +106,33 @@ cite::before {
     margin: 0 -1rem;
 }
 
+/* MEDIA */
+
+iframe {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.post__img,
+.post__img--wide {
+    max-width: clamp(100%, 1600px, 100%);
+    max-height: 90vh;
+}
+
+.post__img {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.post__img--wide {
+    width: 100%;
+    object-fit: contain;
+}
+
+
 /* HEADER
 - LOGO  */
 
@@ -143,23 +170,6 @@ body.photoblog .main__container {
     margin: 2.5rem auto;
 }
 
-.post__img,
-.post__img--wide {
-    max-width: clamp(100%, 1600px, 100%);
-    max-height: 90vh;
-}
-
-.post__img {
-    width: auto;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-}
-
-.post__img--wide {
-    width: 100%;
-    object-fit: contain;
-}
 
 /* Photoblog specific
 - POST styles */
